@@ -43,6 +43,14 @@
         color: map-get($theme-properties, 'text');
         background-color: map-get($theme-properties, 'background');
 
+        a {
+            &:link,
+            &:visited,
+            &:active {
+                color: $colour !important;
+            }
+        }
+
         .accent,
         a:hover {
             color: map-get($theme-properties, 'accent');

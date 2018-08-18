@@ -74,6 +74,7 @@ The framework uses the `Oswald` font face from Google Fonts, with a fall-back on
 
 ## Layout
 Defines a single centered column layout
+
 |Class  |Width|Gutter|
 |-------|-----|------|
 |`.w100`|100% |0%    |
