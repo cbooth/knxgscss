@@ -1,0 +1,51 @@
+@each $name, $colour in $text-bases {
+    .#{$name}-text {
+        color: $colour !important;
+
+        a {
+            &:link,
+            &:visited,
+            &:active {
+                color: $colour !important;
+            }
+        }
+    }
+}
+
+@each $name, $colour in $background-colours {
+    .#{$name}-background {
+        background-color: $colour !important;
+    }
+}
+
+@each $name, $colour in $accent-colours {
+    .#{$name}-accent-text .accent {
+        color: $colour !important;
+    }
+
+    .#{$name}-accent-background .accent{
+        background-color: $colour !important;
+    }
+}
+
+@each $name, $colour in $alert-colours {
+    .#{$name}-alert-text {
+        color: $colour !important;
+    }
+
+    .#{$name}-alert-background {
+        background-color: $colour !important;
+    }
+}
+
+@each $name, $theme-properties in $themes {
+    .#{$name} {
+        color: map-get($theme-properties, 'text');
+        background-color: map-get($theme-properties, 'background');
+
+        .accent,
+        a:hover {
+            color: map-get($theme-properties, 'accent');
+        }
+    }
+}

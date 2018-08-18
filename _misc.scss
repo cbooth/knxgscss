@@ -1,0 +1,44 @@
+body {
+    height: 100%;
+    font-family: $font-family-sans-serif;
+}
+
+a {
+    transition: color ease 0.2s;
+    text-decoration: none;
+    line-height: 4em;
+}
+
+span.label {
+    display: inline-block;
+    background-color: map-get($background-colours, 'white');
+    border-radius: 5px;
+    font-weight: 600;
+    padding: 0 3px 0 3px;
+    margin: 0 6px 0 6px;
+    font-size: 0.75em;
+    vertical-align: center;
+}
+
+i.fa {
+    display: inline-block;
+    line-height: normal;
+    font-weight: 400;
+    font-size: 6vh !important;
+    margin-right: 2%;
+}
+
+ul {
+    list-style: none;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.header {
+    small {
+        text-transform: lowercase;
+        margin-left: 20px;
+    }
+}

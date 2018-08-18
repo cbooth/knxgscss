@@ -1,0 +1,16 @@
+@mixin type($property-map) {
+    $size-scale: map-get($property-map, 'size');
+    $weight-scale: map-get($property-map, 'weight');
+    $unit: map-get($property-map, 'unit');
+
+    font-size: $size-scale*$base-font-size#{$unit};
+    font-weight: $weight-scale*$base-font-weight;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,400,600');
+
+@each $heading-element, $rules in $typographic-properties {
+    #{$heading-element} {
+        @include type($rules);
+    }
+}

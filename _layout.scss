@@ -1,0 +1,7 @@
+@each $width in $content-widths {
+    .w#{$width * 100} {
+        width: $width * 100%;
+        position: relative;
+        left: (1-$width)/2 * 100%;
+    }
+}
